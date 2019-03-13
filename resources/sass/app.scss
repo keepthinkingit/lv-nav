@@ -1,6 +1,6 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
 @import 'variables';
@@ -8,7 +8,323 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+//font-awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/v4-shims.scss";
+
+
+a, abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
+
+html, body {
+    height: 100%; //页面背景色全部填充, 包括 margin:0 padding:0
+}
+
+html {
+    min-height: 100%;
+    overflow-x: hidden;
+    text-size-adjust: 100%;
+    background: transparent;
+    //background-color: blue;
+    //overflow:-moz-scrollbars-none;
+}
+
+//chrome 隐藏滚动条
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", Arial, "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    //background-color: rgb(62, 236, 172);
+    //background-image: linear-gradient(19deg, rgb(226, 130, 236) 0px, rgb(168, 238, 142) 100%);
+    //background-image: radial-gradient(19deg, rgb(62, 236, 172) 0px, rgb(238, 116, 225) 100%);
+    //overflow: hidden;
+}
+
+.element::-webkit-scrollbar {
+    width: 0 !important
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.h95 {
+    height: 95%;
+}
+
+.h90 {
+    height: 95%;
+}
+
+.h85 {
+    max-height: 95%;
+}
+
+.h70 {
+    height: 75%;
+}
+
+button, h4, h5, h6, input, select, textarea {
+    font-size: 100%;
+}
+
+address, cite, dfn, em, i, var {
+    font-style: normal;
+}
+
+small {
+    font-size: 12px;
+}
+
+li, ol, ul {
+    list-style: none;
+}
+
+a, a:link {
+    text-decoration: none;
+}
+
+abbr[title], acronym[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+q::after, q::before {
+    content: "";
+}
+
+legend {
+    color: rgb(0, 0, 0);
+}
+
+fieldset, iframe, img {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    margin: 10px 0 !important;
+}
+
+button, input[type="password"], input[type="reset"], input[type="submit"], input[type="text"] {
+    -webkit-appearance: none;
+    outline: 0px;
+    border: 1px solid rgb(225, 225, 225);
+}
+
+textarea {
+    resize: none;
+    outline: 0px;
+    -webkit-appearance: none;
+}
+
+button, input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+    outline: 0px;
+}
+
+.user-select-none {
+    user-select: none;
+}
+
+.white-space-nowrap {
+    white-space: nowrap;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.border-none {
+    border: none;
+}
+
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.container {
+    //width: 1000px;
+    //margin: 0px auto;
+}
+
+.has-ripple {
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.ripple {
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: scale(0);
+    background: rgb(255, 255, 255);
+    opacity: 1;
+}
+
+.ripple-animate {
+    animation: ripple 0s ease 0s 1 normal none running;
+}
+
+@-webkit-keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+@keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+
+/* welcome */
+//#app {
+//    //margin-top: 21px;
+//    height: 98%;
+//}
+
+.pr {
+    position: relative;
+}
+
+#content {
+    //position: relative;
+    //top: 10%;
+    //height: 100%;
+    margin:0;
+    width: 100%;
+    max-width:100%;
+    padding: 0;
+}
+
+//.main {
+//    //margin-right: 55px !important;
+//    height: 100%;
+//    overflow-y: auto;
+//    position: fixed;
+//    right: 8.3%;
+//    top: 9%;
+//}
+
+.sidebar {
+    //background-color: red;
+    //position:fixed;
+    //top: 10%;
+}
+
+.like {
+    height: 21px;
+}
+
+
+/* tab in homepage */
+#jumbotron {
+    background-color: #563d7c;
+    #hero {
+        padding-top: 90px;
+    }
+    .nav-tabs {
+        border: 0;
+    }
+    //#category {
+    //
+    //}
+}
+
+#left-side {
+    //background: rgba(199, 200, 201, 0.94);
+    .nav-item {
+        margin: 21px;
+    }
+    top: 139px;
+    position: sticky;
+    height: calc(100vh - 139px);
+    //float: left;
+}
+
+#right-side {
+    //overflow-y:scroll;
+    //float: left;
+    //height: 100%;
+    position: relative;
+    .card {
+        margin: 10px;
+    }
+    //.card-body{
+    //    margin: 8px 10px;
+    //}
+}
+
+
+/* create tab */
+//.create-card {
+//    justify-content: center;
+//    background: #fff;
+//    //width: 50rem;
+//    //height: 70rem;
+//    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.11);
+//}
+
+//.card-title {
+//    background-color: darken($primary, 5%);
+//    padding: 2rem;
+//
+//    h1 {
+//        color: #fff;
+//        text-align: center;
+//        font-size: 1.2rem;
+//    }
+//}
