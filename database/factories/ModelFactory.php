@@ -27,6 +27,7 @@ $factory->define(App\Category::class, function ($faker) {
 $factory->define(App\Type::class, function ($faker) {
     return [
         'name' => $faker->unique()->word,
+        'category_id' => $faker->numberBetween(1,10),
     ];
 });
 
@@ -35,6 +36,7 @@ $factory->define(App\Site::class, function ($faker) {
 
     return [
         'name' => $faker->unique()->word,
+        'type_id' => $faker->numberBetween(1,14),
         'intro' => $title,
         'url' => $faker->url,
         'click' => $faker->numberBetween(1,100),

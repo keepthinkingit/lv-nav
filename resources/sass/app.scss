@@ -287,12 +287,13 @@ button, input[type="reset"], input[type="submit"] {
 #left-side {
     //background: rgba(199, 200, 201, 0.94);
     .nav-item {
-        margin: 21px;
+        margin: 12px;
     }
     top: 139px;
     position: sticky;
     height: calc(100vh - 139px);
-    //float: left;
+    padding-top: 21px;
+    padding-bottom: 50px;
 }
 
 #right-side {

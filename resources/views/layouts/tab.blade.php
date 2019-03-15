@@ -4,26 +4,13 @@
             <div class="col-md-12" id="category">
                 <ul class="nav nav-tabs justify-content-center">
                     <li class="nav-item col-md-2"></li>
+                    @foreach ($cate as $cat)
                     <li class="nav-item">
                         <a class="nav-link active" href="#">
-                            <h1 class="font-weight-bold">Pictures</h1>
+                            <h1 class="font-weight-bold">{{ $cat->name }}</h1>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <h1 class="font-weight-bold">Music</h1>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <h1 class="font-weight-bold">Videos</h1>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <h1 class="font-weight-bold">Documents</h1>
-                        </a>
-                    </li>
+                    @endforeach
                     <li class="nav-item col-md-2"></li>
                 </ul>
             </div>

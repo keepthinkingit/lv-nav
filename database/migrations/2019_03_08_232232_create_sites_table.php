@@ -16,6 +16,7 @@ class CreateSitesTable extends Migration
         Schema::create('sites', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
+            $table->tinyInteger('type_id');   //the type id
             $table->string('intro');
             $table->string('url');
             $table->integer('click');

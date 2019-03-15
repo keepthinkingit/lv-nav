@@ -11,16 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
-Route::get('home','HomeController@index')->name('home');
-Route::get('create','NavsController@create')->name('create');
-Route::post('post','NavsControlle@store')->name('store');
-Route::get('edit','NavsController@show')->name('edit');
-Route::patch('update','NavsController@update')->name('update');
-Route::get('delete','NavsController@destroy')->name('delete');
+Route::get('/','HomeController@index')->name('home');
+
+Route::get('/cate/create','CategoriesController@create')->name('categories.create');
+Route::post('/cate/post','CategoriesController@store')->name('categories.store');
+Route::get('/cate/edit','CategoriesController@show')->name('categories.show');
+Route::patch('/cate/update','CategoriesController@update')->name('categories.update');
+Route::get('/cate/delete','CategoriesController@destroy')->name('delete');
 
 Route::get('test',function(){
     return view('test');

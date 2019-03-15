@@ -19478,10 +19478,12 @@ input[type=submit] {
   position: -webkit-sticky;
   position: sticky;
   height: calc(100vh - 139px);
+  padding-top: 21px;
+  padding-bottom: 50px;
 }
 
 #left-side .nav-item {
-  margin: 21px;
+  margin: 12px;
 }
 
 #right-side {
