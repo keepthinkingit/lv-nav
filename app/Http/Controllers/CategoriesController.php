@@ -44,9 +44,16 @@ class CategoriesController extends Controller
 
     }
 
-    public function destroy()
+
+    public function show(Category $category)
     {
-        return view('categories.destroy');
+        return view('categories.show',compact('category'));
+    }
+
+    public function destroy(Category $category)
+    {
+        $category->delete();
+        return redirect('home');
     }
 
     public function index()

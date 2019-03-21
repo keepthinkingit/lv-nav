@@ -6,13 +6,13 @@
             <div class="card ">
 
                 <div class="card-body">
-                    <h2 class="">
+                    <h2>
                         <i class="far fa-edit"></i>
                         一级分类修改
                     </h2>
                     <hr>
 
-                    <form action="{{ route('categories.update') }}" method="post" accept-charset="UTF-8">
+                    <form action="{{ route('cate.update') }}" method="post" accept-charset="UTF-8">
                         {{--<input type="hidden" name="_token" value="{{ csrf_token() }}">--}}
                         @csrf
                         @method('PATCH')

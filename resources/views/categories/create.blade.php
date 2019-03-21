@@ -12,7 +12,7 @@
                     </h2>
                     <hr>
 
-                    <form action="{{ route('categories.store') }}" method="POST" accept-charset="UTF-8">
+                    <form action="{{ route('cate.store') }}" method="POST" accept-charset="UTF-8">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                         {{--@include('shared._error')--}}
