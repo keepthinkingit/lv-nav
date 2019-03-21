@@ -10,26 +10,35 @@ use App\Category;
 
 class CategoriesController extends Controller
 {
+
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function create()
     {
-        $cates = Category::orderBy('order','asc')->get();
-        return view('categories.create',['cates'=>$cates]);
+        $cates = Category::orderBy('order', 'asc')->get();
+        return view('categories.create', ['cates' => $cates]);
     }
 
     public function store(Request $request)
     {
         $result = $request->validate([
-            'name'=> 'required|unique:categories,name|min:2',
-            'order' => 'numeric|max:10'
+            'name' => 'required|unique:categories,name|min:2',
+            'order' => 'numeric|max:10',
         ]);
 
-        if ($result){
+        if ($result)
+        {
             $cate = Category::create([
                 'name' => request('name'),
-                'order' => request('order')
+                'order' => request('order'),
             ]);
             return redirect()->route('home');
-        }else {
+        } else
+        {
             return redirect()->back()->withInput();
         }
 
@@ -40,11 +49,29 @@ class CategoriesController extends Controller
         return view('categories.destroy');
     }
 
-    public function update()
+    public function index()
     {
-        $cates = Category::all();
+        $cate = Category::orderBy('order', 'asc')->get();
 
-        return view('categories.edit',['cates'=>$cates]);
+        return view('categories.index', ['cates' => $cate]);
+    }
+
+    public function update(Request $request)
+    {
+        //多维数组 验证
+        $this->validate($request,[
+            'cate.*.name' => 'required',  //暂时去掉 unique 验证 , 需要用 except 定制
+            'cate.*.order' => 'required|numeric|max:10',
+        ]);
+
+            $cates = new Category;
+            foreach ($request->cate as $id=>$values)
+            {
+                    $values['id'] = $id;
+                    $cates->update($values);
+            };
+            return redirect()->route('home');
+
     }
 
 }

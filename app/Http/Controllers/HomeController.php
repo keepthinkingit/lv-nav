@@ -13,7 +13,6 @@ use App\Type;
 class HomeController extends Controller
 {
 
-
     public function index()
     {
         $cate = Category::orderBy('order','asc')->get();    //按 order 正序排列

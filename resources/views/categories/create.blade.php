@@ -39,6 +39,8 @@
                             </table>
                         </div>
 
+
+
                         <div class="form-group">
                             <input class="form-control" type="text" name="name"
                                    value="{{ old('name') }}"
