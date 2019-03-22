@@ -31,10 +31,6 @@ class HomeController extends Controller
         return view('welcome',compact('cate','type','site'));
     }
 
-    public function admin()
-    {
-        return view('admin');
-    }
 
     public function test()
     {
