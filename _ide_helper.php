@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.7.28 on 2019-03-11 16:27:06.
+ * Generated for Laravel 5.7.28 on 2019-03-22 03:17:09.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -3325,20 +3325,6 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
-         * Get a lock instance.
-         *
-         * @param string $name
-         * @param int $seconds
-         * @return \Illuminate\Contracts\Cache\Lock 
-         * @static 
-         */ 
-        public static function lock($name, $seconds = 0)
-        {
-                        /** @var \Illuminate\Cache\RedisStore $instance */
-                        return $instance->lock($name, $seconds);
-        }
-        
-        /**
          * Remove all items from the cache.
          *
          * @return bool 
@@ -3346,45 +3332,32 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function flush()
         {
-                        /** @var \Illuminate\Cache\RedisStore $instance */
+                        /** @var \Illuminate\Cache\FileStore $instance */
                         return $instance->flush();
         }
         
         /**
-         * Get the Redis connection instance.
+         * Get the Filesystem instance.
          *
-         * @return \Predis\ClientInterface 
+         * @return \Illuminate\Filesystem\Filesystem 
          * @static 
          */ 
-        public static function connection()
+        public static function getFilesystem()
         {
-                        /** @var \Illuminate\Cache\RedisStore $instance */
-                        return $instance->connection();
+                        /** @var \Illuminate\Cache\FileStore $instance */
+                        return $instance->getFilesystem();
         }
         
         /**
-         * Set the connection name to be used.
+         * Get the working directory of the cache.
          *
-         * @param string $connection
-         * @return void 
+         * @return string 
          * @static 
          */ 
-        public static function setConnection($connection)
+        public static function getDirectory()
         {
-                        /** @var \Illuminate\Cache\RedisStore $instance */
-                        $instance->setConnection($connection);
-        }
-        
-        /**
-         * Get the Redis database instance.
-         *
-         * @return \Illuminate\Contracts\Redis\Factory 
-         * @static 
-         */ 
-        public static function getRedis()
-        {
-                        /** @var \Illuminate\Cache\RedisStore $instance */
-                        return $instance->getRedis();
+                        /** @var \Illuminate\Cache\FileStore $instance */
+                        return $instance->getDirectory();
         }
         
         /**
@@ -3395,21 +3368,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getPrefix()
         {
-                        /** @var \Illuminate\Cache\RedisStore $instance */
+                        /** @var \Illuminate\Cache\FileStore $instance */
                         return $instance->getPrefix();
-        }
-        
-        /**
-         * Set the cache key prefix.
-         *
-         * @param string $prefix
-         * @return void 
-         * @static 
-         */ 
-        public static function setPrefix($prefix)
-        {
-                        /** @var \Illuminate\Cache\RedisStore $instance */
-                        $instance->setPrefix($prefix);
         }
          
     }
@@ -15095,6 +15055,327 @@ namespace Barryvdh\Debugbar {
  
 }
 
+namespace Encore\Admin\Facades { 
+
+    /**
+     * Class Admin.
+     *
+     */ 
+    class Admin {
+        
+        /**
+         * Returns the long version of Laravel-admin.
+         *
+         * @return string The long application version
+         * @static 
+         */ 
+        public static function getLongVersion()
+        {
+                        return \Encore\Admin\Admin::getLongVersion();
+        }
+        
+        /**
+         * 
+         *
+         * @param $model
+         * @param \Closure $callable
+         * @return \Encore\Admin\Grid 
+         * @deprecated since v1.6.1
+         * @static 
+         */ 
+        public static function grid($model, $callable)
+        {
+                        /** @var \Encore\Admin\Admin $instance */
+                        return $instance->grid($model, $callable);
+        }
+        
+        /**
+         * 
+         *
+         * @param $model
+         * @param \Closure $callable
+         * @return \Encore\Admin\Form @deprecated since v1.6.1
+         * @static 
+         */ 
+        public static function form($model, $callable)
+        {
+                        /** @var \Encore\Admin\Admin $instance */
+                        return $instance->form($model, $callable);
+        }
+        
+        /**
+         * Build a tree.
+         *
+         * @param $model
+         * @return \Encore\Admin\Tree 
+         * @static 
+         */ 
+        public static function tree($model, $callable = null)
+        {
+                        /** @var \Encore\Admin\Admin $instance */
+                        return $instance->tree($model, $callable);
+        }
+        
+        /**
+         * Build show page.
+         *
+         * @param $model
+         * @param mixed $callable
+         * @return \Encore\Admin\Show 
+         * @deprecated since v1.6.1
+         * @static 
+         */ 
+        public static function show($model, $callable = null)
+        {
+                        /** @var \Encore\Admin\Admin $instance */
+                        return $instance->show($model, $callable);
+        }
+        
+        /**
+         * 
+         *
+         * @param \Closure $callable
+         * @return \Encore\Admin\Layout\Content 
+         * @deprecated since v1.6.1
+         * @static 
+         */ 
+        public static function content($callable = null)
+        {
+                        /** @var \Encore\Admin\Admin $instance */
+                        return $instance->content($callable);
+        }
+        
+        /**
+         * 
+         *
+         * @param $model
+         * @return mixed 
+         * @static 
+         */ 
+        public static function getModel($model)
+        {
+                        /** @var \Encore\Admin\Admin $instance */
+                        return $instance->getModel($model);
+        }
+        
+        /**
+         * Left sider-bar menu.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function menu()
+        {
+                        /** @var \Encore\Admin\Admin $instance */
+                        return $instance->menu();
+        }
+        
+        /**
+         * Set admin title.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function setTitle($title)
+        {
+                        \Encore\Admin\Admin::setTitle($title);
+        }
+        
+        /**
+         * Get admin title.
+         *
+         * @return \Config 
+         * @static 
+         */ 
+        public static function title()
+        {
+                        /** @var \Encore\Admin\Admin $instance */
+                        return $instance->title();
+        }
+        
+        /**
+         * Get current login user.
+         *
+         * @return mixed 
+         * @static 
+         */ 
+        public static function user()
+        {
+                        /** @var \Encore\Admin\Admin $instance */
+                        return $instance->user();
+        }
+        
+        /**
+         * Set navbar.
+         *
+         * @param \Closure|null $builder
+         * @return \Encore\Admin\Navbar 
+         * @static 
+         */ 
+        public static function navbar($builder = null)
+        {
+                        /** @var \Encore\Admin\Admin $instance */
+                        return $instance->navbar($builder);
+        }
+        
+        /**
+         * Get navbar object.
+         *
+         * @return \Encore\Admin\Widgets\Navbar 
+         * @static 
+         */ 
+        public static function getNavbar()
+        {
+                        /** @var \Encore\Admin\Admin $instance */
+                        return $instance->getNavbar();
+        }
+        
+        /**
+         * Register the auth routes.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function registerAuthRoutes()
+        {
+                        /** @var \Encore\Admin\Admin $instance */
+                        $instance->registerAuthRoutes();
+        }
+        
+        /**
+         * Extend a extension.
+         *
+         * @param string $name
+         * @param string $class
+         * @return void 
+         * @static 
+         */ 
+        public static function extend($name, $class)
+        {
+                        \Encore\Admin\Admin::extend($name, $class);
+        }
+        
+        /**
+         * 
+         *
+         * @param callable $callback
+         * @static 
+         */ 
+        public static function booting($callback)
+        {
+                        return \Encore\Admin\Admin::booting($callback);
+        }
+        
+        /**
+         * 
+         *
+         * @param callable $callback
+         * @static 
+         */ 
+        public static function booted($callback)
+        {
+                        return \Encore\Admin\Admin::booted($callback);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function disablePjax()
+        {
+                        /** @var \Encore\Admin\Admin $instance */
+                        return $instance->disablePjax();
+        }
+        
+        /**
+         * Add css or get all css.
+         *
+         * @param null $css
+         * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|void 
+         * @static 
+         */ 
+        public static function css($css = null)
+        {
+                        return \Encore\Admin\Admin::css($css);
+        }
+        
+        /**
+         * 
+         *
+         * @param null $css
+         * @return array|void 
+         * @static 
+         */ 
+        public static function baseCss($css = null)
+        {
+                        return \Encore\Admin\Admin::baseCss($css);
+        }
+        
+        /**
+         * Add js or get all js.
+         *
+         * @param null $js
+         * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|void 
+         * @static 
+         */ 
+        public static function js($js = null)
+        {
+                        return \Encore\Admin\Admin::js($js);
+        }
+        
+        /**
+         * Add js or get all js.
+         *
+         * @param null $js
+         * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|void 
+         * @static 
+         */ 
+        public static function headerJs($js = null)
+        {
+                        return \Encore\Admin\Admin::headerJs($js);
+        }
+        
+        /**
+         * 
+         *
+         * @param null $js
+         * @return array|void 
+         * @static 
+         */ 
+        public static function baseJs($js = null)
+        {
+                        return \Encore\Admin\Admin::baseJs($js);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $script
+         * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|void 
+         * @static 
+         */ 
+        public static function script($script = '')
+        {
+                        return \Encore\Admin\Admin::script($script);
+        }
+        
+        /**
+         * 
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function jQuery()
+        {
+                        /** @var \Encore\Admin\Admin $instance */
+                        return $instance->jQuery();
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -17706,6 +17987,8 @@ namespace  {
     class View extends \Illuminate\Support\Facades\View {}
 
     class Debugbar extends \Barryvdh\Debugbar\Facade {}
+
+    class Admin extends \Encore\Admin\Facades\Admin {}
  
 }
 
