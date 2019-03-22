@@ -16,6 +16,7 @@
 //});
 
 Route::get('/home','HomeController@index')->name('home');
+Route::get('/admin','HomeController@admin')->name('admin');
 Auth::routes();
 
 Route::get('/cate/create','CategoriesController@create')->name('cate.create');

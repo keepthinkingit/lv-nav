@@ -13,6 +13,12 @@ use App\Type;
 class HomeController extends Controller
 {
 
+
+    public function __construct()
+    {
+        $this->middleware('auth')->only('admin');
+    }
+
     public function index()
     {
         $cate = Category::orderBy('order','asc')->get();    //按 order 正序排列
@@ -23,6 +29,11 @@ class HomeController extends Controller
         $site = Site::whereIn('type_id',[3,5])->orderBy('type_id','asc')->get();
 
         return view('welcome',compact('cate','type','site'));
+    }
+
+    public function admin()
+    {
+        return view('admin');
     }
 
     public function test()
