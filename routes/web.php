@@ -27,9 +27,9 @@ Route::patch('/cate/{category?}','CategoriesController@update')->name('cate.upda
 Route::delete('/cate/{category}','CategoriesController@destroy')->name('cate.delete');
 
 
-Route::get('test',function(){
-    return view('test');
-});
+//Route::get('test',function(){
+//    return view('test');
+//});
 
 
 

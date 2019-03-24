@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Site;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
@@ -9,7 +10,7 @@ use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 
-class ExampleController extends Controller
+class SiteController extends Controller
 {
     use HasResourceActions;
 
@@ -30,7 +31,7 @@ class ExampleController extends Controller
     /**
      * Show interface.
      *
-     * @param mixed   $id
+     * @param mixed $id
      * @param Content $content
      * @return Content
      */
@@ -45,7 +46,7 @@ class ExampleController extends Controller
     /**
      * Edit interface.
      *
-     * @param mixed   $id
+     * @param mixed $id
      * @param Content $content
      * @return Content
      */
@@ -78,9 +79,15 @@ class ExampleController extends Controller
      */
     protected function grid()
     {
-        $grid = new Grid(new YourModel);
+        $grid = new Grid(new Site);
 
-        $grid->id('ID')->sortable();
+        $grid->id('Id');
+        $grid->name('Name');
+        $grid->type_id('Type id');
+        $grid->intro('Intro');
+        $grid->url('Url');
+        $grid->click('Click');
+        $grid->like('Like');
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
 
@@ -90,14 +97,20 @@ class ExampleController extends Controller
     /**
      * Make a show builder.
      *
-     * @param mixed   $id
+     * @param mixed $id
      * @return Show
      */
     protected function detail($id)
     {
-        $show = new Show(YourModel::findOrFail($id));
+        $show = new Show(Site::findOrFail($id));
 
-        $show->id('ID');
+        $show->id('Id');
+        $show->name('Name');
+        $show->type_id('Type id');
+        $show->intro('Intro');
+        $show->url('Url');
+        $show->click('Click');
+        $show->like('Like');
         $show->created_at('Created at');
         $show->updated_at('Updated at');
 
@@ -111,11 +124,14 @@ class ExampleController extends Controller
      */
     protected function form()
     {
-        $form = new Form(new YourModel);
+        $form = new Form(new Site);
 
-        $form->display('id', 'ID');
-        $form->display('created_at', 'Created At');
-        $form->display('updated_at', 'Updated At');
+        $form->text('name', 'Name');
+        $form->switch('type_id', 'Type id');
+        $form->text('intro', 'Intro');
+        $form->url('url', 'Url');
+        $form->number('click', 'Click');
+        $form->number('like', 'Like');
 
         return $form;
     }

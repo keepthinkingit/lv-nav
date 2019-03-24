@@ -29,11 +29,12 @@ class ComposerStaticInitd2b9cafa4c4742dc21570bbb6fdbd4d9
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        '4e8671d7be9056dcd04ddd9e8e15f9cc' => __DIR__ . '/..' . '/encore/laravel-admin/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
+        '0c3c22e27afa83be19b4c938f4c6e9ea' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Helpers/functions.php',
         '4a1f389d6ce373bda9e57857d3b61c84' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/helpers.php',
         '0d8253363903f0ac7b0978dcde4e28a0' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/helpers.php',
-        '4e8671d7be9056dcd04ddd9e8e15f9cc' => __DIR__ . '/..' . '/encore/laravel-admin/src/helpers.php',
         'f960e77410032f236cef8c56617b313e' => __DIR__ . '/..' . '/overtrue/laravel-lang/src/helpers.php',
     );
 
@@ -81,6 +82,9 @@ class ComposerStaticInitd2b9cafa4c4742dc21570bbb6fdbd4d9
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Spatie\\TemporaryDirectory\\' => 26,
+            'Spatie\\DbDumper\\' => 16,
+            'Spatie\\Backup\\' => 14,
             'Seld\\PharUtils\\' => 15,
             'Seld\\JsonLint\\' => 14,
         ),
@@ -120,6 +124,7 @@ class ComposerStaticInitd2b9cafa4c4742dc21570bbb6fdbd4d9
         ),
         'J' => 
         array (
+            'Jxlwqq\\StarRating\\' => 18,
             'JsonSchema\\' => 11,
             'JakubOnderka\\PhpConsoleHighlighter\\' => 35,
             'JakubOnderka\\PhpConsoleColor\\' => 29,
@@ -148,6 +153,14 @@ class ComposerStaticInitd2b9cafa4c4742dc21570bbb6fdbd4d9
         ),
         'E' => 
         array (
+            'Encore\\DateRangePicker\\' => 23,
+            'Encore\\Admin\\RedisManager\\' => 26,
+            'Encore\\Admin\\Media\\' => 19,
+            'Encore\\Admin\\LogViewer\\' => 23,
+            'Encore\\Admin\\Helpers\\' => 21,
+            'Encore\\Admin\\Config\\' => 20,
+            'Encore\\Admin\\Backup\\' => 20,
+            'Encore\\Admin\\ApiTester\\' => 23,
             'Encore\\Admin\\' => 13,
             'Egulias\\EmailValidator\\' => 23,
         ),
@@ -290,6 +303,18 @@ class ComposerStaticInitd2b9cafa4c4742dc21570bbb6fdbd4d9
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Spatie\\TemporaryDirectory\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/temporary-directory/src',
+        ),
+        'Spatie\\DbDumper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/db-dumper/src',
+        ),
+        'Spatie\\Backup\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-backup/src',
+        ),
         'Seld\\PharUtils\\' => 
         array (
             0 => __DIR__ . '/..' . '/seld/phar-utils/src',
@@ -362,6 +387,10 @@ class ComposerStaticInitd2b9cafa4c4742dc21570bbb6fdbd4d9
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
         ),
+        'Jxlwqq\\StarRating\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jxlwqq/star-rating/src',
+        ),
         'JsonSchema\\' => 
         array (
             0 => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema',
@@ -414,6 +443,38 @@ class ComposerStaticInitd2b9cafa4c4742dc21570bbb6fdbd4d9
         'Faker\\' => 
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
+        ),
+        'Encore\\DateRangePicker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/daterangepicker/src',
+        ),
+        'Encore\\Admin\\RedisManager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/redis-manager/src',
+        ),
+        'Encore\\Admin\\Media\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/media-manager/src',
+        ),
+        'Encore\\Admin\\LogViewer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/log-viewer/src',
+        ),
+        'Encore\\Admin\\Helpers\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/helpers/src',
+        ),
+        'Encore\\Admin\\Config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/config/src',
+        ),
+        'Encore\\Admin\\Backup\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/backup/src',
+        ),
+        'Encore\\Admin\\ApiTester\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src',
         ),
         'Encore\\Admin\\' => 
         array (
@@ -537,6 +598,13 @@ class ComposerStaticInitd2b9cafa4c4742dc21570bbb6fdbd4d9
     );
 
     public static $classMap = array (
+        'App\\Admin\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Admin/Controllers/AuthController.php',
+        'App\\Admin\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ExampleController.php',
+        'App\\Admin\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/HomeController.php',
+        'App\\Admin\\Controllers\\SiteController' => __DIR__ . '/../..' . '/app/Admin/Controllers/SiteController.php',
+        'App\\Admin\\Controllers\\TypeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/TypeController.php',
+        'App\\Admin\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Admin/Controllers/UserController.php',
+        'App\\Admin\\Controllers\\categoryController' => __DIR__ . '/../..' . '/app/Admin/Controllers/CategoryController.php',
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -1351,6 +1419,11 @@ class ComposerStaticInitd2b9cafa4c4742dc21570bbb6fdbd4d9
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/Warning.php',
         'Encore\\Admin\\Admin' => __DIR__ . '/..' . '/encore/laravel-admin/src/Admin.php',
         'Encore\\Admin\\AdminServiceProvider' => __DIR__ . '/..' . '/encore/laravel-admin/src/AdminServiceProvider.php',
+        'Encore\\Admin\\ApiTester\\ApiLogger' => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src/ApiLogger.php',
+        'Encore\\Admin\\ApiTester\\ApiTester' => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src/ApiTester.php',
+        'Encore\\Admin\\ApiTester\\ApiTesterController' => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src/ApiTesterController.php',
+        'Encore\\Admin\\ApiTester\\ApiTesterServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src/ApiTesterServiceProvider.php',
+        'Encore\\Admin\\ApiTester\\BootExtension' => __DIR__ . '/..' . '/laravel-admin-ext/api-tester/src/BootExtension.php',
         'Encore\\Admin\\Auth\\Database\\AdminTablesSeeder' => __DIR__ . '/..' . '/encore/laravel-admin/src/Auth/Database/AdminTablesSeeder.php',
         'Encore\\Admin\\Auth\\Database\\Administrator' => __DIR__ . '/..' . '/encore/laravel-admin/src/Auth/Database/Administrator.php',
         'Encore\\Admin\\Auth\\Database\\HasPermissions' => __DIR__ . '/..' . '/encore/laravel-admin/src/Auth/Database/HasPermissions.php',
@@ -1359,6 +1432,13 @@ class ComposerStaticInitd2b9cafa4c4742dc21570bbb6fdbd4d9
         'Encore\\Admin\\Auth\\Database\\Permission' => __DIR__ . '/..' . '/encore/laravel-admin/src/Auth/Database/Permission.php',
         'Encore\\Admin\\Auth\\Database\\Role' => __DIR__ . '/..' . '/encore/laravel-admin/src/Auth/Database/Role.php',
         'Encore\\Admin\\Auth\\Permission' => __DIR__ . '/..' . '/encore/laravel-admin/src/Auth/Permission.php',
+        'Encore\\Admin\\Backup\\Backup' => __DIR__ . '/..' . '/laravel-admin-ext/backup/src/Backup.php',
+        'Encore\\Admin\\Backup\\BackupController' => __DIR__ . '/..' . '/laravel-admin-ext/backup/src/BackupController.php',
+        'Encore\\Admin\\Backup\\BackupServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/backup/src/BackupServiceProvider.php',
+        'Encore\\Admin\\Config\\Config' => __DIR__ . '/..' . '/laravel-admin-ext/config/src/Config.php',
+        'Encore\\Admin\\Config\\ConfigController' => __DIR__ . '/..' . '/laravel-admin-ext/config/src/ConfigController.php',
+        'Encore\\Admin\\Config\\ConfigModel' => __DIR__ . '/..' . '/laravel-admin-ext/config/src/ConfigModel.php',
+        'Encore\\Admin\\Config\\ConfigServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/config/src/ConfigServiceProvider.php',
         'Encore\\Admin\\Console\\AdminCommand' => __DIR__ . '/..' . '/encore/laravel-admin/src/Console/AdminCommand.php',
         'Encore\\Admin\\Console\\CreateUserCommand' => __DIR__ . '/..' . '/encore/laravel-admin/src/Console/CreateUserCommand.php',
         'Encore\\Admin\\Console\\ExportSeedCommand' => __DIR__ . '/..' . '/encore/laravel-admin/src/Console/ExportSeedCommand.php',
@@ -1510,16 +1590,43 @@ class ComposerStaticInitd2b9cafa4c4742dc21570bbb6fdbd4d9
         'Encore\\Admin\\Grid\\Tools\\Paginator' => __DIR__ . '/..' . '/encore/laravel-admin/src/Grid/Tools/Paginator.php',
         'Encore\\Admin\\Grid\\Tools\\PerPageSelector' => __DIR__ . '/..' . '/encore/laravel-admin/src/Grid/Tools/PerPageSelector.php',
         'Encore\\Admin\\Grid\\Tools\\RefreshButton' => __DIR__ . '/..' . '/encore/laravel-admin/src/Grid/Tools/RefreshButton.php',
+        'Encore\\Admin\\Helpers\\Controllers\\RouteController' => __DIR__ . '/..' . '/laravel-admin-ext/helpers/src/Controllers/RouteController.php',
+        'Encore\\Admin\\Helpers\\Controllers\\ScaffoldController' => __DIR__ . '/..' . '/laravel-admin-ext/helpers/src/Controllers/ScaffoldController.php',
+        'Encore\\Admin\\Helpers\\Controllers\\StringOutput' => __DIR__ . '/..' . '/laravel-admin-ext/helpers/src/Controllers/TerminalController.php',
+        'Encore\\Admin\\Helpers\\Controllers\\TerminalController' => __DIR__ . '/..' . '/laravel-admin-ext/helpers/src/Controllers/TerminalController.php',
+        'Encore\\Admin\\Helpers\\Helpers' => __DIR__ . '/..' . '/laravel-admin-ext/helpers/src/Helpers.php',
+        'Encore\\Admin\\Helpers\\HelpersServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/helpers/src/HelpersServiceProvider.php',
+        'Encore\\Admin\\Helpers\\Scaffold\\ControllerCreator' => __DIR__ . '/..' . '/laravel-admin-ext/helpers/src/Scaffold/ControllerCreator.php',
+        'Encore\\Admin\\Helpers\\Scaffold\\MigrationCreator' => __DIR__ . '/..' . '/laravel-admin-ext/helpers/src/Scaffold/MigrationCreator.php',
+        'Encore\\Admin\\Helpers\\Scaffold\\ModelCreator' => __DIR__ . '/..' . '/laravel-admin-ext/helpers/src/Scaffold/ModelCreator.php',
         'Encore\\Admin\\Layout\\Buildable' => __DIR__ . '/..' . '/encore/laravel-admin/src/Layout/Buildable.php',
         'Encore\\Admin\\Layout\\Column' => __DIR__ . '/..' . '/encore/laravel-admin/src/Layout/Column.php',
         'Encore\\Admin\\Layout\\Content' => __DIR__ . '/..' . '/encore/laravel-admin/src/Layout/Content.php',
         'Encore\\Admin\\Layout\\Row' => __DIR__ . '/..' . '/encore/laravel-admin/src/Layout/Row.php',
+        'Encore\\Admin\\LogViewer\\BootExtension' => __DIR__ . '/..' . '/laravel-admin-ext/log-viewer/src/BootExtension.php',
+        'Encore\\Admin\\LogViewer\\LogController' => __DIR__ . '/..' . '/laravel-admin-ext/log-viewer/src/LogController.php',
+        'Encore\\Admin\\LogViewer\\LogViewer' => __DIR__ . '/..' . '/laravel-admin-ext/log-viewer/src/LogViewer.php',
+        'Encore\\Admin\\LogViewer\\LogViewerServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/log-viewer/src/LogViewerServiceProvider.php',
+        'Encore\\Admin\\Media\\BootExtension' => __DIR__ . '/..' . '/laravel-admin-ext/media-manager/src/BootExtension.php',
+        'Encore\\Admin\\Media\\MediaController' => __DIR__ . '/..' . '/laravel-admin-ext/media-manager/src/MediaController.php',
+        'Encore\\Admin\\Media\\MediaManager' => __DIR__ . '/..' . '/laravel-admin-ext/media-manager/src/MediaManager.php',
+        'Encore\\Admin\\Media\\MediaServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/media-manager/src/MediaServiceProvider.php',
         'Encore\\Admin\\Middleware\\Authenticate' => __DIR__ . '/..' . '/encore/laravel-admin/src/Middleware/Authenticate.php',
         'Encore\\Admin\\Middleware\\Bootstrap' => __DIR__ . '/..' . '/encore/laravel-admin/src/Middleware/Bootstrap.php',
         'Encore\\Admin\\Middleware\\LogOperation' => __DIR__ . '/..' . '/encore/laravel-admin/src/Middleware/LogOperation.php',
         'Encore\\Admin\\Middleware\\Permission' => __DIR__ . '/..' . '/encore/laravel-admin/src/Middleware/Permission.php',
         'Encore\\Admin\\Middleware\\Pjax' => __DIR__ . '/..' . '/encore/laravel-admin/src/Middleware/Pjax.php',
         'Encore\\Admin\\Middleware\\Session' => __DIR__ . '/..' . '/encore/laravel-admin/src/Middleware/Session.php',
+        'Encore\\Admin\\RedisManager\\BootExtension' => __DIR__ . '/..' . '/laravel-admin-ext/redis-manager/src/BootExtension.php',
+        'Encore\\Admin\\RedisManager\\DataType\\DataType' => __DIR__ . '/..' . '/laravel-admin-ext/redis-manager/src/DataType/DataType.php',
+        'Encore\\Admin\\RedisManager\\DataType\\Hashes' => __DIR__ . '/..' . '/laravel-admin-ext/redis-manager/src/DataType/Hashes.php',
+        'Encore\\Admin\\RedisManager\\DataType\\Lists' => __DIR__ . '/..' . '/laravel-admin-ext/redis-manager/src/DataType/Lists.php',
+        'Encore\\Admin\\RedisManager\\DataType\\Sets' => __DIR__ . '/..' . '/laravel-admin-ext/redis-manager/src/DataType/Sets.php',
+        'Encore\\Admin\\RedisManager\\DataType\\SortedSets' => __DIR__ . '/..' . '/laravel-admin-ext/redis-manager/src/DataType/SortedSets.php',
+        'Encore\\Admin\\RedisManager\\DataType\\Strings' => __DIR__ . '/..' . '/laravel-admin-ext/redis-manager/src/DataType/Strings.php',
+        'Encore\\Admin\\RedisManager\\RedisController' => __DIR__ . '/..' . '/laravel-admin-ext/redis-manager/src/RedisController.php',
+        'Encore\\Admin\\RedisManager\\RedisManager' => __DIR__ . '/..' . '/laravel-admin-ext/redis-manager/src/RedisManager.php',
+        'Encore\\Admin\\RedisManager\\RedisManagerServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/redis-manager/src/RedisManagerServiceProvider.php',
         'Encore\\Admin\\Show' => __DIR__ . '/..' . '/encore/laravel-admin/src/Show.php',
         'Encore\\Admin\\Show\\Divider' => __DIR__ . '/..' . '/encore/laravel-admin/src/Show/Divider.php',
         'Encore\\Admin\\Show\\Field' => __DIR__ . '/..' . '/encore/laravel-admin/src/Show/Field.php',
@@ -1542,6 +1649,9 @@ class ComposerStaticInitd2b9cafa4c4742dc21570bbb6fdbd4d9
         'Encore\\Admin\\Widgets\\Tab' => __DIR__ . '/..' . '/encore/laravel-admin/src/Widgets/Tab.php',
         'Encore\\Admin\\Widgets\\Table' => __DIR__ . '/..' . '/encore/laravel-admin/src/Widgets/Table.php',
         'Encore\\Admin\\Widgets\\Widget' => __DIR__ . '/..' . '/encore/laravel-admin/src/Widgets/Widget.php',
+        'Encore\\DateRangePicker\\DateRangePicker' => __DIR__ . '/..' . '/laravel-admin-ext/daterangepicker/src/DateRangePicker.php',
+        'Encore\\DateRangePicker\\DateRangePickerExtension' => __DIR__ . '/..' . '/laravel-admin-ext/daterangepicker/src/DateRangePickerExtension.php',
+        'Encore\\DateRangePicker\\DateRangePickerServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/daterangepicker/src/DateRangePickerServiceProvider.php',
         'Faker\\Calculator\\Iban' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Iban.php',
         'Faker\\Calculator\\Inn' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Inn.php',
         'Faker\\Calculator\\Luhn' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Luhn.php',
@@ -2995,6 +3105,9 @@ class ComposerStaticInitd2b9cafa4c4742dc21570bbb6fdbd4d9
         'JsonSchema\\Uri\\UriRetriever' => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema/Uri/UriRetriever.php',
         'JsonSchema\\Validator' => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema/Validator.php',
         'JsonSerializable' => __DIR__ . '/..' . '/nesbot/carbon/src/JsonSerializable.php',
+        'Jxlwqq\\StarRating\\StarRating' => __DIR__ . '/..' . '/jxlwqq/star-rating/src/StarRating.php',
+        'Jxlwqq\\StarRating\\StarRatingExtension' => __DIR__ . '/..' . '/jxlwqq/star-rating/src/StarRatingExtension.php',
+        'Jxlwqq\\StarRating\\StarRatingServiceProvider' => __DIR__ . '/..' . '/jxlwqq/star-rating/src/StarRatingServiceProvider.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
@@ -4736,6 +4849,65 @@ class ComposerStaticInitd2b9cafa4c4742dc21570bbb6fdbd4d9
         'Seld\\JsonLint\\Undefined' => __DIR__ . '/..' . '/seld/jsonlint/src/Seld/JsonLint/Undefined.php',
         'Seld\\PharUtils\\Timestamps' => __DIR__ . '/..' . '/seld/phar-utils/src/Timestamps.php',
         'SitesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/SitesTableSeeder.php',
+        'Spatie\\Backup\\BackupDestination\\Backup' => __DIR__ . '/..' . '/spatie/laravel-backup/src/BackupDestination/Backup.php',
+        'Spatie\\Backup\\BackupDestination\\BackupCollection' => __DIR__ . '/..' . '/spatie/laravel-backup/src/BackupDestination/BackupCollection.php',
+        'Spatie\\Backup\\BackupDestination\\BackupDestination' => __DIR__ . '/..' . '/spatie/laravel-backup/src/BackupDestination/BackupDestination.php',
+        'Spatie\\Backup\\BackupDestination\\BackupDestinationFactory' => __DIR__ . '/..' . '/spatie/laravel-backup/src/BackupDestination/BackupDestinationFactory.php',
+        'Spatie\\Backup\\BackupServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-backup/src/BackupServiceProvider.php',
+        'Spatie\\Backup\\Commands\\BackupCommand' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Commands/BackupCommand.php',
+        'Spatie\\Backup\\Commands\\BaseCommand' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Commands/BaseCommand.php',
+        'Spatie\\Backup\\Commands\\CleanupCommand' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Commands/CleanupCommand.php',
+        'Spatie\\Backup\\Commands\\ListCommand' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Commands/ListCommand.php',
+        'Spatie\\Backup\\Commands\\MonitorCommand' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Commands/MonitorCommand.php',
+        'Spatie\\Backup\\Events\\BackupHasFailed' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Events/BackupHasFailed.php',
+        'Spatie\\Backup\\Events\\BackupManifestWasCreated' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Events/BackupManifestWasCreated.php',
+        'Spatie\\Backup\\Events\\BackupWasSuccessful' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Events/BackupWasSuccessful.php',
+        'Spatie\\Backup\\Events\\BackupZipWasCreated' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Events/BackupZipWasCreated.php',
+        'Spatie\\Backup\\Events\\CleanupHasFailed' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Events/CleanupHasFailed.php',
+        'Spatie\\Backup\\Events\\CleanupWasSuccessful' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Events/CleanupWasSuccessful.php',
+        'Spatie\\Backup\\Events\\HealthyBackupWasFound' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Events/HealthyBackupWasFound.php',
+        'Spatie\\Backup\\Events\\UnhealthyBackupWasFound' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Events/UnhealthyBackupWasFound.php',
+        'Spatie\\Backup\\Exceptions\\CannotCreateDbDumper' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Exceptions/CannotCreateDbDumper.php',
+        'Spatie\\Backup\\Exceptions\\InvalidBackupDestination' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Exceptions/InvalidBackupDestination.php',
+        'Spatie\\Backup\\Exceptions\\InvalidBackupJob' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Exceptions/InvalidBackupJob.php',
+        'Spatie\\Backup\\Exceptions\\InvalidCommand' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Exceptions/InvalidCommand.php',
+        'Spatie\\Backup\\Exceptions\\InvalidConfiguration' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Exceptions/InvalidConfiguration.php',
+        'Spatie\\Backup\\Exceptions\\NotificationCouldNotBeSent' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Exceptions/NotificationCouldNotBeSent.php',
+        'Spatie\\Backup\\Helpers\\ConsoleOutput' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Helpers/ConsoleOutput.php',
+        'Spatie\\Backup\\Helpers\\File' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Helpers/File.php',
+        'Spatie\\Backup\\Helpers\\Format' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Helpers/Format.php',
+        'Spatie\\Backup\\Notifications\\BaseNotification' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Notifications/BaseNotification.php',
+        'Spatie\\Backup\\Notifications\\EventHandler' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Notifications/EventHandler.php',
+        'Spatie\\Backup\\Notifications\\Notifiable' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Notifications/Notifiable.php',
+        'Spatie\\Backup\\Notifications\\Notifications\\BackupHasFailed' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Notifications/Notifications/BackupHasFailed.php',
+        'Spatie\\Backup\\Notifications\\Notifications\\BackupWasSuccessful' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Notifications/Notifications/BackupWasSuccessful.php',
+        'Spatie\\Backup\\Notifications\\Notifications\\CleanupHasFailed' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Notifications/Notifications/CleanupHasFailed.php',
+        'Spatie\\Backup\\Notifications\\Notifications\\CleanupWasSuccessful' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Notifications/Notifications/CleanupWasSuccessful.php',
+        'Spatie\\Backup\\Notifications\\Notifications\\HealthyBackupWasFound' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Notifications/Notifications/HealthyBackupWasFound.php',
+        'Spatie\\Backup\\Notifications\\Notifications\\UnhealthyBackupWasFound' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Notifications/Notifications/UnhealthyBackupWasFound.php',
+        'Spatie\\Backup\\Tasks\\Backup\\BackupJob' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Tasks/Backup/BackupJob.php',
+        'Spatie\\Backup\\Tasks\\Backup\\BackupJobFactory' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Tasks/Backup/BackupJobFactory.php',
+        'Spatie\\Backup\\Tasks\\Backup\\DbDumperFactory' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Tasks/Backup/DbDumperFactory.php',
+        'Spatie\\Backup\\Tasks\\Backup\\FileSelection' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Tasks/Backup/FileSelection.php',
+        'Spatie\\Backup\\Tasks\\Backup\\Manifest' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Tasks/Backup/Manifest.php',
+        'Spatie\\Backup\\Tasks\\Backup\\Zip' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Tasks/Backup/Zip.php',
+        'Spatie\\Backup\\Tasks\\Cleanup\\CleanupJob' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Tasks/Cleanup/CleanupJob.php',
+        'Spatie\\Backup\\Tasks\\Cleanup\\CleanupStrategy' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Tasks/Cleanup/CleanupStrategy.php',
+        'Spatie\\Backup\\Tasks\\Cleanup\\Period' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Tasks/Cleanup/Period.php',
+        'Spatie\\Backup\\Tasks\\Cleanup\\Strategies\\DefaultStrategy' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Tasks/Cleanup/Strategies/DefaultStrategy.php',
+        'Spatie\\Backup\\Tasks\\Monitor\\BackupDestinationStatus' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Tasks/Monitor/BackupDestinationStatus.php',
+        'Spatie\\Backup\\Tasks\\Monitor\\BackupDestinationStatusFactory' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Tasks/Monitor/BackupDestinationStatusFactory.php',
+        'Spatie\\DbDumper\\Compressors\\Compressor' => __DIR__ . '/..' . '/spatie/db-dumper/src/Compressors/Compressor.php',
+        'Spatie\\DbDumper\\Compressors\\GzipCompressor' => __DIR__ . '/..' . '/spatie/db-dumper/src/Compressors/GzipCompressor.php',
+        'Spatie\\DbDumper\\Databases\\MongoDb' => __DIR__ . '/..' . '/spatie/db-dumper/src/Databases/MongoDb.php',
+        'Spatie\\DbDumper\\Databases\\MySql' => __DIR__ . '/..' . '/spatie/db-dumper/src/Databases/MySql.php',
+        'Spatie\\DbDumper\\Databases\\PostgreSql' => __DIR__ . '/..' . '/spatie/db-dumper/src/Databases/PostgreSql.php',
+        'Spatie\\DbDumper\\Databases\\Sqlite' => __DIR__ . '/..' . '/spatie/db-dumper/src/Databases/Sqlite.php',
+        'Spatie\\DbDumper\\DbDumper' => __DIR__ . '/..' . '/spatie/db-dumper/src/DbDumper.php',
+        'Spatie\\DbDumper\\Exceptions\\CannotSetParameter' => __DIR__ . '/..' . '/spatie/db-dumper/src/Exceptions/CannotSetParameter.php',
+        'Spatie\\DbDumper\\Exceptions\\CannotStartDump' => __DIR__ . '/..' . '/spatie/db-dumper/src/Exceptions/CannotStartDump.php',
+        'Spatie\\DbDumper\\Exceptions\\DumpFailed' => __DIR__ . '/..' . '/spatie/db-dumper/src/Exceptions/DumpFailed.php',
+        'Spatie\\TemporaryDirectory\\TemporaryDirectory' => __DIR__ . '/..' . '/spatie/temporary-directory/src/TemporaryDirectory.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
         'Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader' => __DIR__ . '/..' . '/symfony/console/CommandLoader/ContainerCommandLoader.php',

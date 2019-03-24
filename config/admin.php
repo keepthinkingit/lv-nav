@@ -10,7 +10,7 @@ return [
     | This value is the name of laravel-admin, This setting is displayed on the
     | login page.
     |
-    */
+     */
     'name' => 'Laravel-admin',
 
     /*
@@ -21,7 +21,7 @@ return [
     | The logo of all admin pages. You can also set it as an image by using a
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
-    */
+     */
     'logo' => '<b>Laravel</b> admin',
 
     /*
@@ -33,7 +33,7 @@ return [
     | also set it as an image by using a `img` tag, eg
     | '<img src="http://logo-url" alt="Admin logo">'.
     |
-    */
+     */
     'logo-mini' => '<b>La</b>',
 
     /*
@@ -45,15 +45,15 @@ return [
     | the controller namespace, and the default middleware. If you want to
     | access through the root path, just set the prefix to empty string.
     |
-    */
+     */
     'route' => [
 
         'prefix' => env('ADMIN_ROUTE_PREFIX', 'admin'),
 
-        'namespace' => 'App\\Admin\\Controllers',
+            'namespace' => 'App\\Admin\\Controllers',
 
-        'middleware' => ['web', 'admin'],
-    ],
+            'middleware' => ['web', 'admin'],
+        ],
 
     /*
     |--------------------------------------------------------------------------
@@ -64,8 +64,8 @@ return [
     | files of the administration page. The default is `app/Admin`, which must
     | be set before running `artisan admin::install` to take effect.
     |
-    */
-    'directory' => app_path('Admin'),
+     */
+        'directory' => app_path('Admin'),
 
     /*
     |--------------------------------------------------------------------------
@@ -74,8 +74,8 @@ return [
     |
     | Html title for all pages.
     |
-    */
-    'title' => 'Admin',
+     */
+        'title' => 'Admin',
 
     /*
     |--------------------------------------------------------------------------
@@ -84,8 +84,8 @@ return [
     |
     | If your page is going to be accessed via https, set it to `true`.
     |
-    */
-    'https' => env('ADMIN_HTTPS', false),
+     */
+        'https' => env('ADMIN_HTTPS', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -97,28 +97,28 @@ return [
     |
     | You can specify a controller for `login` `logout` and other auth routes.
     |
-    */
-    'auth' => [
+     */
+        'auth' => [
 
-        'controller' => App\Admin\Controllers\AuthController::class,
+            'controller' => App\Admin\Controllers\AuthController::class,
 
-        'guards' => [
-            'admin' => [
-                'driver'   => 'session',
-                'provider' => 'admin',
+            'guards' => [
+                'admin' => [
+                    'driver'   => 'session',
+                    'provider' => 'admin',
+                ],
             ],
-        ],
 
-        'providers' => [
-            'admin' => [
-                'driver' => 'eloquent',
-                'model'  => Encore\Admin\Auth\Database\Administrator::class,
+            'providers' => [
+                'admin' => [
+                    'driver' => 'eloquent',
+                    'model'  => Encore\Admin\Auth\Database\Administrator::class,
+                ],
             ],
-        ],
 
-        // Add "remember me" to login form
-        'remember' => true,
-    ],
+            // Add "remember me" to login form
+            'remember' => true,
+        ],
 
     /*
     |--------------------------------------------------------------------------
@@ -128,18 +128,18 @@ return [
     | File system configuration for form upload files and images, including
     | disk and upload path.
     |
-    */
-    'upload' => [
+     */
+        'upload' => [
 
-        // Disk in `config/filesystem.php`.
-        'disk' => 'admin',
+            // Disk in `config/filesystem.php`.
+            'disk' => 'admin',
 
-        // Image and file upload path under the disk above.
-        'directory' => [
-            'image' => 'images',
-            'file'  => 'files',
+            // Image and file upload path under the disk above.
+            'directory' => [
+                'image' => 'images',
+                'file'  => 'files',
+            ],
         ],
-    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -148,35 +148,35 @@ return [
     |
     | Here are database settings for laravel-admin builtin model & tables.
     |
-    */
-    'database' => [
+     */
+        'database' => [
 
-        // Database connection for following tables.
-        'connection' => '',
+            // Database connection for following tables.
+            'connection' => '',
 
-        // User tables and model.
-        'users_table' => 'admin_users',
-        'users_model' => Encore\Admin\Auth\Database\Administrator::class,
+            // User tables and model.
+            'users_table' => 'admin_users',
+            'users_model' => Encore\Admin\Auth\Database\Administrator::class,
 
-        // Role table and model.
-        'roles_table' => 'admin_roles',
-        'roles_model' => Encore\Admin\Auth\Database\Role::class,
+            // Role table and model.
+            'roles_table' => 'admin_roles',
+            'roles_model' => Encore\Admin\Auth\Database\Role::class,
 
-        // Permission table and model.
-        'permissions_table' => 'admin_permissions',
-        'permissions_model' => Encore\Admin\Auth\Database\Permission::class,
+            // Permission table and model.
+            'permissions_table' => 'admin_permissions',
+            'permissions_model' => Encore\Admin\Auth\Database\Permission::class,
 
-        // Menu table and model.
-        'menu_table' => 'admin_menu',
-        'menu_model' => Encore\Admin\Auth\Database\Menu::class,
+            // Menu table and model.
+            'menu_table' => 'admin_menu',
+            'menu_model' => Encore\Admin\Auth\Database\Menu::class,
 
-        // Pivot table for table above.
-        'operation_log_table'    => 'admin_operation_log',
-        'user_permissions_table' => 'admin_user_permissions',
-        'role_users_table'       => 'admin_role_users',
-        'role_permissions_table' => 'admin_role_permissions',
-        'role_menu_table'        => 'admin_role_menu',
-    ],
+            // Pivot table for table above.
+            'operation_log_table'    => 'admin_operation_log',
+            'user_permissions_table' => 'admin_user_permissions',
+            'role_users_table'       => 'admin_role_users',
+            'role_permissions_table' => 'admin_role_permissions',
+            'role_menu_table'        => 'admin_role_menu',
+        ],
 
     /*
     |--------------------------------------------------------------------------
@@ -185,26 +185,26 @@ return [
     |
     | By setting this option to open or close operation log in laravel-admin.
     |
-    */
-    'operation_log' => [
+     */
+        'operation_log' => [
 
-        'enable' => true,
+            'enable' => true,
 
-        /*
-         * Only logging allowed methods in the list
-         */
-        'allowed_methods' => ['GET', 'HEAD', 'POST', 'PUT', 'DELETE', 'CONNECT', 'OPTIONS', 'TRACE', 'PATCH'],
+            /*
+             * Only logging allowed methods in the list
+             */
+            'allowed_methods' => ['GET', 'HEAD', 'POST', 'PUT', 'DELETE', 'CONNECT', 'OPTIONS', 'TRACE', 'PATCH'],
 
-        /*
-         * Routes that will not log to database.
-         *
-         * All method to path like: admin/auth/logs
-         * or specific method to path like: get:admin/auth/logs.
-         */
-        'except' => [
-            'admin/auth/logs*',
+            /*
+             * Routes that will not log to database.
+             *
+             * All method to path like: admin/auth/logs
+             * or specific method to path like: get:admin/auth/logs.
+             */
+            'except' => [
+                'admin/auth/logs*',
+            ],
         ],
-    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -213,8 +213,8 @@ return [
     |
     | Supported: "tencent", "google", "yandex".
     |
-    */
-    'map_provider' => 'google',
+     */
+        'map_provider' => 'google',
 
     /*
     |--------------------------------------------------------------------------
@@ -229,8 +229,8 @@ return [
     |    "skin-green", "skin-green-light", "skin-purple", "skin-purple-light",
     |    "skin-red", "skin-red-light", "skin-black", "skin-black-light".
     |
-    */
-    'skin' => 'skin-blue-light',
+     */
+        'skin' => 'skin-blue-light',
 
     /*
     |--------------------------------------------------------------------------
@@ -243,8 +243,8 @@ return [
     | Supported: "fixed", "layout-boxed", "layout-top-nav", "sidebar-collapse",
     | "sidebar-mini".
     |
-    */
-    'layout' => ['sidebar-mini', 'sidebar-collapse'],
+     */
+        'layout' => ['sidebar-mini', 'sidebar-collapse'],
 
     /*
     |--------------------------------------------------------------------------
@@ -253,8 +253,8 @@ return [
     |
     | This value is used to set the background image of login page.
     |
-    */
-    'login_background_image' => '',
+     */
+        'login_background_image' => '',
 
     /*
     |--------------------------------------------------------------------------
@@ -264,8 +264,8 @@ return [
     | Whether to display the version number of laravel-admin at the footer of
     | each page
     |
-    */
-    'show_version' => true,
+     */
+        'show_version' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -274,8 +274,8 @@ return [
     |
     | Whether to display the environment at the footer of each page
     |
-    */
-    'show_environment' => true,
+     */
+        'show_environment' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -283,8 +283,8 @@ return [
     |--------------------------------------------------------------------------
     |
     | whether enable menu bind to a permission
-    */
-    'menu_bind_permission' => true,
+     */
+        'menu_bind_permission' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -292,8 +292,8 @@ return [
     |--------------------------------------------------------------------------
     |
     | Whether enable default breadcrumb for every page content.
-    */
-    'enable_default_breadcrumb' => true,
+     */
+        'enable_default_breadcrumb' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -302,8 +302,8 @@ return [
     |
     | When you use command `php artisan admin:extend` to generate extensions,
     | the extension files will be generated in this directory.
-    */
-    'extension_dir' => app_path('Admin/Extensions'),
+     */
+        'extension_dir' => app_path('Admin/Extensions'),
 
     /*
     |--------------------------------------------------------------------------
@@ -313,8 +313,45 @@ return [
     | You can find all available extensions here
     | https://github.com/laravel-admin-extensions.
     |
-    */
+     */
     'extensions' => [
+        'media-manager' => [
+            'disk' => 'public'
+        ],
 
-    ],
+        'api-tester' => [
+            // route prefix for APIs
+            'prefix' => 'api',
+
+            // auth guard for api
+            'guard'  => 'api',
+
+            // If you are not using the default user model as the authentication model, set it up
+//            'user_retriever' => function ($id) {
+//                return \App\User::find($id);
+//            },
+        ],
+
+        'daterangepicker' => [
+
+            // Set to `false` if you want to disable this extension
+            'enable' => true,
+
+            // Find more configurations http://www.daterangepicker.com/
+            'config' => [
+
+            ]
+        ],
+
+        'star-rating' => [
+
+            // set to false if you want to disable this extension
+            'enable' => true,
+
+            // configuration
+            'config' => [
+                'min' => 1, 'max' => 5, 'step' => 1, 'size' => 'xs'
+            ]
+        ]
+    ]
 ];
