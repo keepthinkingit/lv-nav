@@ -22,6 +22,8 @@
     {{--<img src="{{ asset('svg/top.svg') }}" alt="top" class="scroll-top">--}}
     @yield('content')
     @yield('_footer')
+    {{--<flash message="{{ session('flash') }}"></flash>--}}
+    {{--<flash></flash>--}}
 </div>
 
 <!-- Scripts -->

@@ -26,6 +26,9 @@ Route::post('/cate','CategoriesController@store')->name('cate.store');
 Route::patch('/cate/{category?}','CategoriesController@update')->name('cate.update');
 Route::delete('/cate/{category}','CategoriesController@destroy')->name('cate.delete');
 
+//tool
+Route::get('/tool/time','ToolsController@getTime')->name('tool.time');
+
 
 //Route::get('test',function(){
 //    return view('test');

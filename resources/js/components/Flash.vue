@@ -9,6 +9,7 @@
 
 <script>
     export default {
+        el: '#app',
         props: ['message'],
 
         data() {

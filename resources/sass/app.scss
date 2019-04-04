@@ -309,6 +309,27 @@ button, input[type="reset"], input[type="submit"] {
     //}
 }
 
+/* timestamp exchange */
+.big-title {
+    font-size: 40px;
+};
+#timestamp {
+    p {
+        font-size: 18px;
+    }
+    .fs19 {
+        font-size: 19px;
+    }
+    .card {
+        min-height: 264px;
+        padding: 15px;
+    }
+    .result {
+        margin-top: 15px;
+    }
+}
+
+
 
 /* create tab */
 //.create-card {
