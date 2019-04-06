@@ -7,6 +7,8 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+//使用 vue-moment 处理日期时间
+Vue.use(require('vue-moment'));
 
 /**
  * The following block of code may be used to automatically register your

@@ -7,11 +7,9 @@
                 </div>
                 <div class="card-body text-center">
                     <p>当前时间戳</p>
-                    <span>{{ now }}</span>
-                    <p>当前UTC</p>
-                    <span>{{ utc }}</span>
+                    <span>{{ ts }}</span>
                     <p>本地时间</p>
-                    <span>{{ localTime }}</span>
+                    <span>{{ new Date() | moment() }}</span>
                 </div>
             </div>
         </div>
@@ -22,9 +20,9 @@
                     <p class="card-text">转换为 UTC</p>
                 </div>
                 <div class="card-body">
-                    <input type="text" name="timestamp" v-model="now"/>
+                    <input type="text" name="timestamp" v-model="ts"/>
                     <button @click="toUTC" class=""> 转为日期</button>
-                    <p v-show="show" class="result">{{ utc2 }}</p>
+                    <p v-show="show" class="result">{{ utc2 | moment('YYYY-MM-DD,HH:mm:ss Z') }}</p>
                 </div>
             </div>
         </div>
@@ -35,50 +33,38 @@
                     <p class="card-text">转为时间戳</p>
                 </div>
                 <div class="card-body">
-                    <input type="text" id="ts2human_inp" v-model="utc"/>
-                    <button @click="toTs"> 转为时间戳</button>
-                    <p v-show="show" class="result">{{ ts2 }}</p>
+                    <div class="col-auto">
+                        <input type="textarea" class="form-control" v-model="utc"/>
+                        <p class="result">{{ utc | moment('X') }}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </template>
 
 <script>
     export default {
         data() {
             return {
-                ts: '',
-                ts2: '',
-                now: '',
+                ts: '' ,
                 show: false,
                 utc: '',
                 utc2: '',
-                localTime: '',
             }
         },
 
         created() {
-            let dates = new Date();
-            this.ts = dates;
-            this.now = Math.round(dates.getTime() / 1000);
-            this.utc = dates.toJSON();
-            this.localTime = dates.toLocaleDateString() + dates.toLocaleTimeString();
+            this.ts = this.$moment().unix();
+            // this.ts = Math.round(date.getTime() / 1000);
+            this.utc = this.$moment().format();
         },
 
         methods: {
             toUTC: function () {
-                let utc2 = new Date(this.now * 1000).toJSON();
-                this.utc2 = utc2;
+                this.utc2 = this.$moment.unix(this.ts);
                 this.show = true;
             },
-
-            toTs: function () {
-                let ts2 = Math.round(new Date(this.utc).getTime() / 1000);
-                this.ts2 = ts2;
-                this.show = true;
-            }
         },
 
     };
