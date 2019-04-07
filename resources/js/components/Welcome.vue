@@ -1,14 +1,41 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card card-default">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <ul class="nav nav-pills flex-column col-md-2 jumbotron " id="left-side">
+                @foreach ($type as $typ)
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ '#tid' . $typ->id }}">
+                        {{$typ->name}}
+                    </a>
+                </li>
+                @endforeach
+                <div class="tile like">
+                    <i class="fas fa-thumbs-up"></i>
                 </div>
+            </ul>
+
+            <div class="col-md-9 " id="right-side">
+                @foreach ($type as $typ)
+                <button type="button" id="{{ 'tid' . $typ->id }}"
+                        class="btn btn-lg btn-secondary btn-block  tid">
+                    {{ $typ->name }}
+                </button>
+                <div class="row">
+                    @foreach ($site as $sit)
+                    @if ($sit->type_id == $typ->id )
+                    <div class="col-4 col-md-3">
+                        <div class="card border-success">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">{{ $sit->name }}</h5>
+                                <p class="card-text">{{ $sit->intro }} </p>
+                                <a href="{{ $sit->url }}" class="btn btn-sm btn-outline-primary">Go</a>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
+                    @endforeach
+                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -16,8 +43,18 @@
 
 <script>
     export default {
+        date() {
+            return {
+                name:'',
+        }
+        },
+
         mounted() {
             console.log('Component mounted.')
-        }
+        },
+
+        method:function(){
+
+        },
     }
 </script>

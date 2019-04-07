@@ -26,7 +26,7 @@ $factory->define(App\Category::class, function ($faker) {
 
 $factory->define(App\Type::class, function ($faker) {
     return [
-        'name' => $faker->unique()->word,
+        'name' => $faker->word,
         'category_id' => $faker->numberBetween(1,10),
     ];
 });

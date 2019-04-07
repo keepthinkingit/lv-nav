@@ -21,8 +21,8 @@ Vue.use(require('vue-moment'));
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-// Vue.component('flash', require('./components/Flash.vue'));  //注册 组件
-Vue.component('welcome', require('./components/Welcome.vue'));
+Vue.component('flash', require('./components/Flash.vue').default);  //注册 组件
+Vue.component('welcome', require('./components/Welcome.vue').default);
 Vue.component('tab', require('./components/Tab.vue'));
 Vue.component('timestamp', require('./components/Timestamp.vue').default);
 
