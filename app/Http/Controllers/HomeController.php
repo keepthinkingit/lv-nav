@@ -22,14 +22,14 @@ class HomeController extends Controller
     public function index()
     {
         $cate = Category::orderBy('order','asc')->get();    //按 order 正序排列
-//        dd($cate);
 //        $type = Type::orderBy('id','asc')->limit(12)->get();  //正序 12 个结果
 //        $site = Site::orderBy('type_id','asc')->get();
 
-        $type = Type::where('category_id',1)->orderBy('id','asc')->get();
-        $site = Site::orderBy('type_id','asc')->get();
+        $types = Type::where('category_id',1)->orderBy('id','asc')->get();
+        $sites = Site::orderBy('type_id','asc')->get();
 
-        return view('welcome',compact('cate','type','site'));
+//                dd($types);
+        return view('welcome',compact('cate','types','sites'));
     }
 
 

@@ -7,21 +7,26 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+// import App from './components/app.vue'
+// import VueRouter from 'vue-router';
+// import Routers from './router.js';
+import iView from 'iview';
+import 'iview/dist/styles/iview.css';
+// 导入vue
+Vue.use(iView);
+// Vue.use(VueRouter);
+// 路由配置
+// const RouterConfig = {
+//     routes: [
+//         // ExampleComponent laravel默认的示例组件
+//         { path: '/', component: require('./components/ExampleComponent.vue') },
+//         { path: '/bsh', component: require('./components/bsh.vue') },
+//     ]};
+// const router = new VueRouter(RouterConfig);
 //使用 vue-moment 处理日期时间
 Vue.use(require('vue-moment'));
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
-Vue.component('flash', require('./components/Flash.vue').default);  //注册 组件
+// Vue.component('flash', require('./components/Flash.vue').default);  //注册 组件
 Vue.component('welcome', require('./components/Welcome.vue').default);
 Vue.component('tab', require('./components/Tab.vue'));
 Vue.component('timestamp', require('./components/Timestamp.vue').default);
